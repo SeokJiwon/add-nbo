@@ -9,7 +9,7 @@
 uint32_t read_ntohl(char *f){
 	FILE *fp=fopen(f,"rb");
 	uint32_t n;
-	fread(&n,sizeof(uint32_t),1,fp);
+	fread(&n,1,sizeof(uint32_t),fp);
 	fclose(fp);
 	return ntohl(n);
 }
